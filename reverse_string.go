@@ -1,9 +1,13 @@
 package reverse_string
 
-func ReverseString(input string) (output string) {
+import (
+	"strings"
+)
 
-	for i := len(input) - 1; i >= 0; i-- {
-		output += string(input[i])
+func ReverseString(input string) (output string) {
+	text := strings.Split(input, "")
+	for i := len(text) - 1; i >= 0; i-- {
+		output += string(text[i])
 	}
 	return output
 }
